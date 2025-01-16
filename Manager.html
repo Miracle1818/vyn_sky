@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografi Sky A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+        flex-direction: column;
+         min-height: 100vh;
+            background-color: #f8f9fa; /* Warna latar belakang */
+        }
+
+        .navbar {
+            position: fixed; /* Mengatur navbar agar tetap di atas */
+            top: 0; /* Menempatkan navbar di bagian atas */
+            left: 0; /* Menempatkan navbar di sisi kiri */
+            right: 0; /* Menempatkan navbar di sisi kanan */
+            z-index: 1000; /* Menjaga navbar di atas konten lainnya */
+        }
+        .navbar {
+        background-color: #0097a7; /* Warna navbar */
+        padding: 10px 20px; /* Menambahkan padding untuk navbar */
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 15px; /* Menambahkan jarak antar link */
+        font-weight: bold; /* Menebalkan teks link */
+    }
+
+    .navbar-brand {
+        font-size: 1.5em; 
+    }
+
+        .container {
+            flex: 1;
+            margin-top: 80px; /* Memberikan ruang untuk navbar */
+            background-color: #ffffff; /* Warna latar belakang kontainer */
+            padding: 30px;
+            border-radius: 15px; /* Membuat sudut lebih bulat */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Menambah efek bayangan */
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px; /* Menambah jarak bawah */
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 150px; /* Memperbesar gambar profil */
+            height: 150px; /* Memperbesar gambar profil */
+            margin-right: 30px; /* Menambah jarak kanan */
+            border: 3px solid #007bff; /* Menambah border pada gambar */
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 2.5em; /* Memperbesar ukuran font */
+            color: #343a40; /* Mengubah warna teks */
+        }
+
+        h4 {
+            color: #007bff;
+            font-weight: bold; /* Menebalkan teks */
+        }
+
+        .biography {
+            margin-top: 30px; /* Menambah jarak atas */
+        }
+
+        .quote {
+            font-style: italic;
+            color: #6c757d; /* Mengubah warna kutipan */
+            margin-top: 20px;
+            border-left: 4px solid #007bff; /* Menambah garis di sebelah kiri kutipan */
+            padding-left: 15px; /* Menambah padding kiri */
+        }
+
+        .section-title {
+            margin-top: 40px;
+            font-size: 1.8em;
+            color: #343a40;
+            text-align: center;
+        }
+
+        .section-content {
+            margin-top: 20px;
+            text-align: justify;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 48%; /* Mengatur lebar gambar */
+            border-radius: 10px; /* Membuat sudut gambar lebih bulat */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambah bayangan pada gambar */
+        }
+
+        footer {
+            background-color: rgba(52, 58, 64, 0.7); /* Semi-transparan */
+            color: white; /* Warna teks footer */
+            text-align: center; /* Pusatkan teks */
+            padding: 1rem; /* Padding untuk footer */
+            backdrop-filter: blur(5px); /* Efek blur */
+            -webkit-backdrop-filter: blur(5px); /* Tambahkan dukungan untuk Safari */
+            width: 100%; /* Memastikan footer memenuhi lebar */
+            position: relative; /* Memastikan footer berada di bawah konten */
+            margin-top: 30px; /* Jarak atas footer */
+            position: relative;
+        }
+
+        .footer-icons i {
+            margin: 0 10px; /* Jarak antara ikon */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">VYN SKY</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Aboutme.html">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeeGhRGrvxgty7xL3zQvR2sKn1tQB89cnxBxyJHwaojs_ymAg/viewform?usp=dialog">Saran</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Manager.html">Manager</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn btn-secondary ml-auto" id="toggleNavbarButton">☰</button> <!-- Tombol titik tiga di pojok kanan -->
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <img src="manager.png" alt="Foto Profil Sky A">
+            <div>
+                <h2>Sky A</h2>
+                <h4>Usia: 19</h4>
+                <h4>Keahlian Utama: Pengembangan bakat digital, produksi konten, strategi branding</h4>
+            </div>
+        </div>
+        <div class="biography">
+            <h4>Tentang Manager  :</h4>
+            <p class="section-content">
+                Sebagai seorang manajer VTuber yang berdedikasi, Sky A dikenal atas kemampuannya membimbing dan mengelola VTuber dari tahap awal hingga mencapai puncak popularitas. Berawal sebagai produser konten kreatif, ia mengembangkan kariernya ke dalam manajemen artis digital, melihat peluang besar dalam fenomena VTuber yang berkembang pesat.
+            </p>
+            <p class="section-content">
+                Dengan pendekatan manajemen yang mengedepankan kolaborasi dan inovasi, Sky A telah membantu VTuber membentuk identitas unik, meningkatkan keterlibatan audiens, dan meraih kesuksesan di platform seperti YouTube, Twitch, dan media sosial lainnya.
+            </p>
+            <p class="quote">
+                “Kesuksesan sejati seorang VTuber bukan hanya soal angka, tapi tentang membangun komunitas yang terlibat dan setia. Oleh karena itu, pendekatan saya selalu humanis meskipun dalam dunia virtual,” kata Sky A.
+            </p>
+        </div>
+
+       
+
+        <h2 class="section-title">Visi</h2>
+        <p class="section-content">
+            Melihat ke depan, Sky A berkomitmen untuk terus mengembangkan bakat-bakat baru di dunia digital. Ia percaya bahwa dengan pendekatan yang tepat, setiap VTuber dapat mencapai potensi terbaik mereka dan menciptakan dampak positif di komunitas mereka.
+        </p>
+    </div>
+
+    <footer>
+        <p>This website is created by VYN</p>
+        <div class="footer-icons">
+            <i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@vyn_miracle" class="text-white">TikTok</a>
+            <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/vyn_skye/" class="text-white">Instagram</a>
+            <i class="fab fa-discord"></i> <a href="https://discord.com/invite/yourdiscordlink" class="text-white">Discord</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('toggleNavbarButton').addEventListener('click', function() {
+            var navbar = document.getElementById('navbarNav');
+            if (navbar.classList.contains('show')) {
+                navbar.classList.remove('show');
+            } else {
+                navbar.classList.add('show');
+            }
+        });
+    </script>
+</body>
+
+</html>

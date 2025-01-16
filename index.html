@@ -13,6 +13,10 @@
             background-size: 600% 600%;
             animation: gradient 15s ease infinite;
             font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Pastikan body memiliki tinggi minimal */
+            margin: 0; /* Menghapus margin default */
         }
 
         @keyframes gradient {
@@ -21,17 +25,27 @@
             100% { background-position: 0% 50%; }
         }
 
+        .navbar {
+            position: fixed; /* Mengatur navbar agar tetap di atas */
+            top: 0; /* Menempatkan navbar di bagian atas */
+            left: 0; /* Menempatkan navbar di sisi kiri */
+            right: 0; /* Menempatkan navbar di sisi kanan */
+            z-index: 1000; /* Menjaga navbar di atas konten lainnya */
+        }
+
         .container {
+            flex: 1; /* Membuat container mengisi ruang yang tersedia */
             width: 90%;
             max-width: 500px;
             height: auto;
-            max-height: 600px;
+            max-height: 500px;
             text-align: center;
             background: rgb(19, 193, 199);
             border-radius: 50px;
             padding: 50px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
+            margin: auto; /* Pusatkan container */
+            margin-top: 80px; /* Memberikan ruang untuk navbar */
         }
 
         .profile {
@@ -93,9 +107,46 @@
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
+        .navbar {
+            background-color: #0097a7; /* Warna navbar yang menarik */
+        }
+        .navbar-brand, .nav-link {
+            color: rgb(8, 0, 0) !important; /* Warna teks navbar */
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #091314 !important; /* Warna teks saat hover */
+        }
+
+        footer {
+            background-color: rgba(52, 58, 64, 0.7); /* Semi-transparan */
+            color: white; /* Warna teks footer */
+            text-align: center; /* Pusatkan teks */
+            padding: 1rem; /* Padding untuk footer */
+            backdrop-filter: blur(5px); /* Efek blur */
+            -webkit-backdrop-filter: blur(5px); /* Tambahkan dukungan untuk Safari */
+            width: 100%; /* Memastikan footer memenuhi lebar */
+            position: relative; /* Memastikan footer berada di bawah konten */
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="linktree.html">VYN SKY</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Aboutme.html">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeeGhRGrvxgty7xL3zQvR2sKn1tQB89cnxBxyJHwaojs_ymAg/viewform?usp=dialog">Saran</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Manager.html">Manager</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn btn-secondary ml-auto" id="toggleNavbarButton">☰</button> <!-- Tombol titik tiga di pojok kanan -->
+    </nav>
     <div class="container">
         <div class="paw-print paw1"></div>
         <div class="paw-print paw2"></div>
@@ -115,5 +166,20 @@
             <a href="https://open.spotify.com/user/31i7ezrn72vtmncka3y5notrek6m?si=83eea8f2583144b8" class="btn btn-dark">Spotify</a>
         </div>
     </div>
+    <footer>
+        <p>This website is created by VYN</p>
+        <a href="https://www.instagram.com/vyn_skye/?__pwa=1#" class="text-white">Kontak</a>
+    </footer>
+
+    <script>
+        document.getElementById('toggleNavbarButton').addEventListener('click', function() {
+            var navbar = document.getElementById('navbarNav');
+            if (navbar.classList.contains('show')) {
+                navbar.classList.remove('show');
+            } else {
+                navbar.classList.add('show');
+            }
+        });
+    </script>
 </body>
 </html>
